@@ -40,6 +40,30 @@ to the organization and any projects belonging to the organization.
       "name": "iPhone Redesign",
       "slug": "iphone-redesign"
     }]
+  },
+  "links": {
+    {
+      "organizations.projects": {
+        "href": "https://api.layervault.com/api/v2/organizations/{organizations.projects}",
+        "type": "projects"
+      },
+      "organizations.users": {
+        "href": "https://api.layervault.com/api/v2/organizations/{organizations.users}",
+        "type": "users"
+      },
+      "organizations.administrators": {
+        "href": "https://api.layervault.com/api/v2/organizations/{organizations.administrators}",
+        "type": "users"
+      },
+      "organizations.editors": {
+        "href": "https://api.layervault.com/api/v2/organizations/{organizations.editors}",
+        "type": "users"
+      },
+      "organizations.spectators": {
+        "href": "https://api.layervault.com/api/v2/organizations/{organizations.spectators}",
+        "type": "users"
+      }
+    }
   }
 }
 ```
