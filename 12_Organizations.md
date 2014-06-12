@@ -29,7 +29,6 @@ to the organization and any projects belonging to the organization.
     "deleted_at": null,
     "updated_at": "2014-06-12T17:14:22Z",
     "created_at":"2013-06-12T17:14:22Z",
-    "created_at": "",
     "sync_type": "layervault",
     "cancelled_at": null,
     "links": {
