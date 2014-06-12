@@ -1,3 +1,5 @@
+## Methods
+
 ### Organizations
 
 #### Retrieving Organization Information
