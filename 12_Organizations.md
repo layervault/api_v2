@@ -13,7 +13,8 @@ to the organization and any projects belonging to the organization.
 
  Example Request
 
-    $ curl -H 'Authorization: Bearer <your access token>' 'https://api.layervault.com/api/v2/organizations/123'
+    $ curl -H 'Authorization: Bearer <your access token>' \
+      'https://api.layervault.com/api/v2/organizations/123'
 
  Example Response
 
