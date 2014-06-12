@@ -7,6 +7,9 @@
 This call returns information about an organization, including any users belonging
 to the organization and any projects belonging to the organization.
 
+A special note: The linked `"projects"` array for each organization will change, depending
+on the authenticated user. If no user is authenticated, only public projects will be displayed.
+
  Definition
 
     GET /api/v2/organizations/:id
