@@ -110,15 +110,14 @@ other feedback items.
   "feedback_items": [{
     "id": "123",
     "href": "https://api.layervault.com/api/v2/feedback_items/123",
-    "message": "Looking good!",
+    "message": "Loving the direction!",
     "top": 0,
     "right": 100,
     "bottom": 100,
     "left": 0,
     "links": {
       "user": "101",
-      "preview": "1001",
-      "feedback_items": ["4001", "4002"] // Reply items
+      "preview": "1001"
     }
   }],
   "linked": {
