@@ -103,7 +103,7 @@ All update requests must include valid [JSON Patch (RFC 6902) documents](http://
 
 **Example Response**
 
-This endpoint will respond with the update file resource in the same format as the GET request.
+This endpoint will respond with the updated file resource in the same format as the GET request.
 
 **Editable Properties**
 
@@ -120,3 +120,4 @@ This endpoint will respond with the update file resource in the same format as t
 - HTTP Status: 404 if the file cannot be found
 - HTTP Status: 415 if the `Content-Type` is `application/json-patch+json`
 - HTTP Status: 422 if the PATCH payload indicated any operation other than `"replace"`
+
