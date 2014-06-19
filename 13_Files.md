@@ -97,7 +97,7 @@ All update requests must include valid [JSON Patch (RFC 6902) documents](http://
 
 ```json
 [
-  { "op": "replace", "path": "files/0/view_permission", "value": "disabled" }
+  { "op": "replace", "path": "/files/0/view_permission", "value": "disabled" }
 ]
 ```
 
