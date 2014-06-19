@@ -157,4 +157,4 @@ Keep in mind the key you post with is pluralized, i.e. `feedback_items`.
 - HTTP Status: 403 if the user specified does not have permission leave feedback on ths given page
 - HTTP Status: 404 if on of the resources (parent feedback item or preview) cannot be found
 - HTTP Status: 415 if the `Content-Type` is `application/vnd.api+json`
-- HTTP Status: 422 if the POST payload does not conform to the JSON API spec.
+- HTTP Status: 422 if the POST payload does not conform to the JSON API spec
