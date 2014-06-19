@@ -138,7 +138,7 @@ other feedback items.
 
 - `message`: (required, String) Message of the feedback item
 - `links/preview`: (required, String) ID of the preview to leave the feedback on
-- `links/feedback_item`: (optiona, String) ID of the feeback item to reply to
+- `links/feedback_item`: (optional, String) ID of the feeback item to reply to
 - `top`: (optional, Integer) Pixel top of the annotation
 - `left`: (optional, Integer) Pixel left of the annotation
 - `bottom`: (optional, Integer) Pixel bottom of the annotation
