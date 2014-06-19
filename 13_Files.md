@@ -19,7 +19,7 @@ doozy.
 
 ```json
 {
-  "files": [(
+  "files": [{
     "id": "123",
     "name": "My File.psd",
     "slug": "my-file--psd",
@@ -35,7 +35,7 @@ doozy.
       "revision_clusters": ["1", "2", "3"],
       "folder": "5001"
     }
-  )],
+  }],
   "linked": {
     "revision_clusters": [
       // Revision cluster objects
