@@ -201,3 +201,30 @@ The endpoint will respond with the updated feedback item resource in the same fo
 - HTTP Status: 404 if the feedback item cannot be found
 - HTTP Status: 415 if the `Content-Type` is `application/json-patch+json`
 - HTTP Status: 422 if the PATCH payload indicated any operation other than `"replace"`
+
+#### Deleting a Feedback Item
+
+You can delete a feedback item if your user ran their mouth too much.
+
+Only the user that published the feedback item or an organization's administrator can
+delete the feedback item. All others will be greeted with an `HTTP 403`.
+
+**Definition**
+
+    DELETE /api/v2/feedback_items/:id
+
+**Example Request**
+
+    $ curl -H 'Authorization: Bearer <your access token>' \
+      -X DELETE \
+      'https://api.layervault.com/api/v2/feedback_items/123'
+
+**Example Response**
+
+The response's body will be empty
+
+**Returns**
+
+- HTTP Status: 204 on success.
+- HTTP Status: 403 if the user specified cannot delete the the feedback item
+- HTTP Status: 404 if the feedback item cannot be found
