@@ -158,3 +158,46 @@ Keep in mind the key you post with is pluralized, i.e. `feedback_items`.
 - HTTP Status: 404 if on of the resources (parent feedback item or preview) cannot be found
 - HTTP Status: 415 if the `Content-Type` is `application/vnd.api+json`
 - HTTP Status: 422 if the POST payload does not conform to the JSON API spec
+
+#### Updating a Feedback Item
+
+You can update a feedback item's message after it has been published like so.
+
+Only the user that published the feedback item can also edit it.
+
+**Definition**
+
+    PATCH /api/v2/feedback_items/:id
+
+**Example Request**
+
+    $ curl -H 'Authorization: Bearer <your access token>' \
+      -X PATCH \
+      -H "Content-Type: application/json-patch+json" \
+      -d '[ ... ]' \
+      'https://api.layervault.com/api/v2/feedback_items/123'
+
+**JSON PATCH Payload**
+
+```json
+[
+  { "op": "replace", "path": "/feedback_items/0/message", "value": "Actually, I changed my mind. I don't like this." }
+]
+```
+
+**Example Response**
+
+The endpoint will respond with the updated feedback item resource in the same format as the GET request.
+
+**Editable Properties**
+
+- `message`: (String) Message of the feedback item
+
+**Returns**
+
+- HTTP Status: 201 on success.
+- HTTP Status: 400 if the PATCH payload is not valid JSON
+- HTTP Status: 403 if the user specified cannot edit the feedback item
+- HTTP Status: 404 if the feedback item cannot be found
+- HTTP Status: 415 if the `Content-Type` is `application/json-patch+json`
+- HTTP Status: 422 if the PATCH payload indicated any operation other than `"replace"`
