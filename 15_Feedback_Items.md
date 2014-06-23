@@ -155,7 +155,7 @@ Keep in mind the key you post with is pluralized, i.e. `feedback_items`.
 - HTTP Status: 201 on success.
 - HTTP Status: 401 if no user is specified.
 - HTTP Status: 403 if the user specified does not have permission leave feedback on ths given page
-- HTTP Status: 404 if on of the resources (parent feedback item or preview) cannot be found
+- HTTP Status: 404 if one of the resources (parent feedback item or preview) cannot be found
 - HTTP Status: 415 if the `Content-Type` is `application/vnd.api+json`
 - HTTP Status: 422 if the POST payload does not conform to the JSON API spec
 
@@ -226,5 +226,7 @@ The response's body will be empty
 **Returns**
 
 - HTTP Status: 204 on success.
+- HTTP Status: 401 if no user is authenticated
 - HTTP Status: 403 if the user specified cannot delete the the feedback item
 - HTTP Status: 404 if the feedback item cannot be found
+
