@@ -78,7 +78,7 @@ Using the API, it's possible to create a revision for a specific file.
     "md5": "2809857199fe8edd720e7a18935956f8",
     "parent_md5": "ba750b2e87781f35488cd61825d00921",
     "file_data_fingerprint": "d15f367c88d29477c8dec0eb5601afbc",
-    "assembled_file_data_fingerprint": "2809857199fe8edd720e7a18935956f8"
+    "assembled_file_data_fingerprint": "2809857199fe8edd720e7a18935956f8",
     "links": {
       "file": "1001"
     }
