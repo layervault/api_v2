@@ -63,8 +63,8 @@ pixel values to the top-left corner of the parent preview, as defined by the
 **Returns**
 
 - HTTP Status: 200 on success.
-- HTTP Status: 404 when the organization is not found.
-- HTTP Status: 404 when the authenticated user cannot see specified organization.
+- HTTP Status: 404 when the feedback item is not found.
+- HTTP Status: 404 when the authenticated user cannot see specified feedback item.
 
 #### Creating a Feedback Item
 
