@@ -1,7 +1,7 @@
 ### Presentations
 
 Presentations are a great way to show off the finished product of your
-work. You can create new presentations or add existing revisions to
+work. You can create new presentations or add existing previews to
 presentations via the API.
 
 #### Retrieving Presentation Information
@@ -74,7 +74,7 @@ with zero or more presentation items.
   "presentations": [{
     "links": {
       "project": "1001",
-      "revisions": ["1", "2", "3"]
+      "previews": ["1", "2", "3"]
     }
   }]
 }
@@ -87,7 +87,7 @@ See the response generated from the GET request for a presentation.
 **Parameters**
 
 - `links/project` (required, String) ID of the Project to attach this presentation to
-- `links/revisions` (optional, Array of Strings) Zero or more IDs of revisions to add to this presentation
+- `links/previews` (optional, Array of Strings) Zero or more IDs of previews to add to this presentation
 
 **Notes on the Request**
 
@@ -98,17 +98,17 @@ Keep in mind that the key you POST with is pluralized, i.e. `presentations`.
 **Returns**
 
 - HTTP Status: 201 on success.
-- HTTP Status: 400 if all revisions are not in the same project
+- HTTP Status: 400 if all previews are not in the same project
 - HTTP Status: 401 if no user is specified.
-- HTTP Status: 403 if the user specified does not have permission modify the given revisions
+- HTTP Status: 403 if the user specified does not have permission modify the given previews
 - HTTP Status: 403 if the user cannot modify the specified project
-- HTTP Status: 404 if one of revisions cannot be found
+- HTTP Status: 404 if one of previews cannot be found
 - HTTP Status: 415 if the `Content-Type` is `application/vnd.api+json`
 - HTTP Status: 422 if the POST payload does not conform to the JSON API spec
 
-#### Adding a revision to a Presentation
+#### Adding a preview to a Presentation
 
-Revisions can be added to a presentation at any time. If a revision has already been added to
+Revisions can be added to a presentation at any time. If a preview has already been added to
 the presentation, it will be added again.
 
 **Definition**
@@ -127,11 +127,11 @@ the presentation, it will be added again.
 
 ```json
 [
-  { "op": "add", "path": "/presentations/0/links/revisions/-", "value": "456" }
+  { "op": "add", "path": "/presentations/0/links/previews/-", "value": "456" }
 ]
 ```
 
-Note: `456` is the existing revision's ID.
+Note: `456` is the existing preview's ID.
 
 **Example Response**
 
@@ -139,11 +139,11 @@ The endpoint will respond with the updated presentation resource in the same for
 
 **Editable Properties**
 
-- `links/revisions` (String) The ID of a revision you wish to add to the specified presentation
+- `links/previews` (String) The ID of a preview you wish to add to the specified presentation
 
 **Returns**
 
-- HTTP Status: 201 on success.
+- HTTP Status: 200 on success.
 - HTTP Status: 400 if the PATCH payload is not valid JSON
 - HTTP Status: 403 if the user specified cannot edit the presentation
 - HTTP Status: 404 if the presentation cannot be found
