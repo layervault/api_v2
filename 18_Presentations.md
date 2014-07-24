@@ -52,7 +52,7 @@ the JSON response would then contain both presentations.
 
 #### Creating a Presentation
 
-Create a presentation is achieved by attached a presentation to a project resource
+Creating a presentation is achieved by attached a presentation to a project resource
 with zero or more presentation items.
 
 **Definition**
